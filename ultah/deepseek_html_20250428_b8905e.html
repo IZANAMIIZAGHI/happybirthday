@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="invitation-container">
+        <div class="envelope" id="envelope">
+            <div class="envelope-front">
+                <div class="heart"></div>
+                <p>Klik untuk membuka</p>
+            </div>
+            <div class="envelope-back"></div>
+            <div class="letter">
+                <div class="letter-content">
+                    <h1>Undangan Ulang Tahun</h1>
+                    <p class="subtitle">Kamu diundang untuk merayakan ulang tahun</p>
+                    <h2 class="name">Siti sarah aulia</h2>
+                    <div class="details">
+                        <p><span>🗓️ Tanggal:</span> 10 November 2025</p>
+                        <p><span>⏰ Waktu:</span>  09.00-Selesai</p>
+                        <p><span>📍 Tempat:</span> masih ditentukan</p>
+                    </div>
+                    <button id="playMusic">Putar Musik</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content hidden" id="mainContent">
+        <div class="hero-section">
+            <h1>Happy Birthday <span>Sarah</span></h1>
+            <p class="countdown" id="countdown"></p>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Kenangan Kita</h2>
+            <div class="gallery">
+                <img src="assets/images/photo1.jpg" alt="Photo 1">
+                <img src="assets/images/photo2.jpg" alt="Photo 2">
+                <img src="assets/images/photo3.jpg" alt="Photo 3">
+            </div>
+        </div>
+
+        <div class="rsvp-section">
+            <h2>Konfirmasi Kehadiran</h2>
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <select id="attendance" required>
+                        <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                        <option value="yes">Akan Hadir</option>
+                        <option value="no">Tidak Bisa Hadir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Pesan untuk kami"></textarea>
+                </div>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>Dibuat dengan ❤️ untuk Siti sarah aulia</p>
+        </footer>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <canvas id="confetti"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
